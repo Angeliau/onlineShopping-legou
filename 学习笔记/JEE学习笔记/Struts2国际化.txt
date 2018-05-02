@@ -1,0 +1,17 @@
+                    Struts2中的国际化
+资源文件的放置位置和加载
+1、用于JSP页面的资源包
+这一系列的资源包，如果是用于JSP页面国际化，一般会放置在一个文件夹中，如“viewResources”,
+将该文件夹放置在 classes 目录下（如果是IDE创建的Web应用，可以直接放置在src目录下，
+项目打包是会自动复制到 classes 目录下）, 
+其加载需要在 stucts.xml 文件中使用如下示例进行加载
+（假设要加载的资源包位于classes/viewResources/login.properties）：
+<constant name="struts.custom.i18n.resources" value="viewResources.login" /> 
+
+2、用于Action内部的资源包
+如果是用于 Action 内部的（如验校信息的国际化文本等），
+需要放置在该Action所在的同级目录下，同时命名的格式为"actionName_语言_国家.properties"，
+如 “LoginAction_zh_CN.properties”，在相应的 Action 运行时，会自动加载这些资源包，不用特别声明；
+
+除了以上的方式外，常用的还有包的资源包、全局资源包，但是一般不推荐这2种方式，
+因为这样会将所有的配置信息包含在同一个文件中，造成该文件过于庞大后期难以维护。

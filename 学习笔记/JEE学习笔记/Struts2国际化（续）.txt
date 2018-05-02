@@ -1,0 +1,23 @@
+                    Struts2中的国际化（续）
+国际化文本的获取
+
+1）在JSP页面中获取
+在JSP页面中获取国际化文本可以 通过 <s:property value="getText('some.key')"> 
+或 <s:text name="some.key">标签，
+示例如下：<title><s:property value="getText('loginPage')" /></title>  
+或  
+<title><s:text name="loginPage" /></title>
+2）在Action中获取
+在Action中获取，只要将该Action继承ActionSupport类，直接使用 getText("some.key")，即可获取，如下：
+public class LoginAction extends ActionSupport{  
+    public String excute(){  
+        ....  
+        String tip = getText("successTip");  
+    }  
+}  
+3）在表单标签中，通过key属性指定资源文件中的key，如：
+<s:textfield name="realname" key="username" />
+或<s:textfield name="realname" label="%getText('username')}" />
+4）在校验文件中（一般指在xml文件中）
+通过message的key属性指定资源文件中的key，如
+<message key="login.error.username" />

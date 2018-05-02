@@ -1,0 +1,45 @@
+color：主要用于选取颜色
+<input type="color" name="favcolor">
+date：从一个日期选择器选择一个日期。
+定义一个时间控制器:
+生日: <input type="date" name="bday">
+datetime：允许选择一个日期（UTC 时间）
+定义一个日期和时间控制器（本地时间）:
+生日 (日期和时间): <input type="datetime" name="bdaytime">
+datetime-local：允许选择一个日期和时间 (无时区).
+生日 (日期和时间): <input type="datetime-local" name="bdaytime">
+email：用于应该包含 e-mail 地址的输入域。
+E-mail: <input type="email" name="email">
+month：允许选择一个月份。
+<input type="month" name="bdaymonth">
+number：用于应该包含数值的输入域。
+可以自定义对所接受的数字的限定，如下：数量 ( 1 到 5 之间 ): 
+<input type="number" name="quantity" min="1" max="5">
+使用下面的属性来规定对数字类型的限定：
+属性	    描述
+disabled	规定输入字段是禁用的
+max	        规定允许的最大值
+maxlength	规定输入字段的最大字符长度
+min	        规定允许的最小值
+pattern	    规定用于验证输入字段的模式
+readonly	规定输入字段的值无法修改
+required	规定输入字段的值是必需的
+size	    规定输入字段中的可见字符数
+step	    规定输入字段的合法数字间隔
+value	    规定输入字段的默认值
+
+range：用于应该包含一定范围内数字值的输入域。
+定义一个不需要非常精确的数值（类似于滑块控制）:
+<input type="range" name="points" min="1" max="10">
+
+search：search 类型用于搜索域，比如站点搜索或 Google 搜索。
+tel：定义输入电话号码字段
+time：允许选择一个时间。
+定义可输入时间控制器（无时区）：
+选择时间: <input type="time" name="usr_time">
+url：用于应该包含 URL 地址的输入域，在提交表单时，会自动验证 url 域的值。
+week：允许你选择周和年。
+定义周和年 (无时区):
+选择周: <input type="week" name="week_year">
+注意:并不是所有的主流浏览器都支持新的input类型，不过已经可以在所有主流的浏览器中使用它们了。
+即使不被支持，仍然可以显示为常规的文本域。

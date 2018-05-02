@@ -1,0 +1,337 @@
+﻿常用标签：
+<table>	定义表格
+<th>	定义表格的表头
+<tr>	定义表格的行
+<td>	定义表格单元
+<caption>	定义表格标题
+<colgroup>	定义表格列的组
+<col>	定义用于表格列的属性
+<thead>	定义表格的页眉
+<tbody>	定义表格的主体
+<tfoot>	定义表格的页脚
+表格由 <table> 标签来定义。每个表格均有若干行（由 <tr> 标签定义），每行被分割为若干单元格（由 <td> 标签定义）。
+字母 td 指表格数据（table data），即数据单元格的内容。
+数据单元格可以包含文本、图片、列表、段落、表单、水平线、表格等等。
+表格的表头使用 <th> 标签进行定义。（大多数浏览器会把表头显示为粗体居中的文本）
+带标题 (caption) 的表格：
+<table border="1">
+  <caption>Monthly savings</caption>
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+</table>
+定义跨行或跨列的表格单元格:
+单元格跨两列:
+<tr>
+  <th>Name</th>
+  <th  colspan="2">Telephone</th>
+</tr>
+<tr>
+  <td>Bill Gates</td>
+  <td>555 77 854</td>
+  <td>555 77 855</td>
+</tr>
+单元格跨两行:
+<tr>
+  <th>First Name:</th>
+  <td>Bill Gates</td>
+</tr>
+<tr>
+  <th rowspan="2">Telephone:</th>
+  <td>555 77 854</td>
+</tr>
+<tr>
+  <td>555 77 855</td>
+</tr>
+Cell padding 来创建单元格内容与其边框之间的空白。
+Cell spacing 增加单元格之间的距离。
+
+附：css美化的表格
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td align="center" class="biaoti" height="60">受理员业务统计表</td>
+  </tr>
+  <tr>
+    <td align="right" height="25">2017-01-02---2017-05-02</td>
+  </tr>
+</table>
+
+<table width="100%" border="0" cellspacing="1" cellpadding="4" bgcolor="#cccccc" class="tabtop13" align="center">
+  <tr>
+    <td colspan="2" class="btbg font-center titfont" rowspan="2">受理员</td>
+    <td width="10%" class="btbg font-center titfont" rowspan="2">受理数</td>
+    <td width="10%" class="btbg font-center titfont" rowspan="2">自办数</td>
+    <td width="10%" class="btbg font-center titfont" rowspan="2">直接解答</td>
+    <td colspan="2" class="btbg font-center titfont">拟办意见</td>
+    <td colspan="2" class="btbg font-center titfont">返回修改</td>
+    <td colspan="3" class="btbg font-center titfont">工单类型</td>
+  </tr>
+  <tr>
+    <td width="8%" class="btbg font-center">同意</td>
+    <td width="8%" class="btbg font-center">比例</td>
+    <td width="8%" class="btbg font-center">数量</td>
+    <td width="8%" class="btbg font-center">比例</td>
+    <td width="8%" class="btbg font-center">建议件</td>
+    <td width="8%" class="btbg font-center">诉求件</td>
+    <td width="8%" class="btbg font-center">咨询件</td>
+  </tr>
+  <tr>
+    <td width="7%" rowspan="8" class="btbg1 font-center">受理处</td>
+    <td width="7%"  class="btbg2">王艳</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="btbg2">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="btbg2">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="btbg2">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="btbg2">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="btbg2">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="btbg2">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="btbg2 font-center">总计</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+  </tr>
+  <tr>
+    <td width="7%" rowspan="8" class="btbg1 font-center">话务组</td>
+    <td width="7%"  class="btbg2">王艳</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="btbg2">王艳</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="btbg2">王艳</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="btbg2">王艳</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="btbg2">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="btbg2">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="btbg2">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+   <tr>
+    <td class="btbg2 font-center">总计</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+  </tr>
+</table>
+
+@charset "utf-8";
+/* CSS Document */
+.tabtop13 {
+	margin-top: 13px;
+}
+.tabtop13 td{
+	background-color:#ffffff;
+	height:25px;
+	line-height:150%;
+}
+.font-center{ text-align:center}
+.btbg{background:#e9faff !important;}
+.btbg1{background:#f2fbfe !important;}
+.btbg2{background:#f3f3f3 !important;}
+.biaoti{
+	font-family: 微软雅黑;
+	font-size: 26px;
+	font-weight: bold;
+	border-bottom:1px dashed #CCCCCC;
+	color: #255e95;
+}
+.titfont {
+	
+	font-family: 微软雅黑;
+	font-size: 16px;
+	font-weight: bold;
+	color: #255e95;
+	background: url(../images/ico3.gif) no-repeat 15px center;
+	background-color:#e9faff;
+}
+.tabtxt2 {
+	font-family: 微软雅黑;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 10px;
+	color:#327cd1;
+}
+.tabtxt3 {
+	font-family: 微软雅黑;
+	font-size: 14px;
+	padding-left: 15px;
+	color: #000;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	line-height: 20px;
+}

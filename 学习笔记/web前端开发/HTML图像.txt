@@ -1,0 +1,30 @@
+﻿HTML图像标签（ <img>）和源属性（Src）
+在 HTML 中，图像由<img> 标签定义。
+<img> 是空标签，只包含属性，没有闭合标签。
+要在页面上显示图像，需要使用源属性（src）。src 指 "source"。源属性的值是图像的 URL 地址。
+HTML 图像- Alt属性
+alt 属性用来为图像定义一串预备的可替换的文本。
+替换文本属性的值是用户定义的。
+<img src="boat.gif" alt="Big Boat">
+在浏览器无法载入图像时，替换文本属性告诉读者她们失去的信息。此时，浏览器将显示这个替代性的文本而不是图像。
+HTML 图像- 设置图像的高度与宽度
+height（高度） 与 width（宽度）属性用于设置图像的高度与宽度。
+属性值默认单位为像素。
+
+创建带有可供点击区域的图像地图。其中的每个区域都是一个超级链接。
+<map>	定义图像地图
+<area>	定义图像地图中的可点击区域
+<img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+
+<map name="planetmap">
+  <area shape="rect" coords="0,0,82,126" alt="Sun" href="sun.htm">
+  <area shape="circle" coords="90,58,3" alt="Mercury" href="mercur.htm">
+  <area shape="circle" coords="124,58,8" alt="Venus" href="venus.htm">
+</map>
+参数：shape指的是点击区域的形状，coords指的是链接区域在图片中的坐标（像素为单位）
+1、矩形：(左上角顶点坐标为(x1,y1)，右下角顶点坐标为(x2,y2))
+<area shape="rect" coords="x1,y1,x2,y2" href=url>
+2、圆形：(圆心坐标为(X1,y1)，半径为r)
+<area shape="circle" coords="x1,y1,r" href=url>
+3、多边形：(各顶点坐标依次为(x1,y1)、(x2,y2)、(x3,y3) ......)
+<area shape="poly" coords="x1,y1,x2,y2 ......" href=url>

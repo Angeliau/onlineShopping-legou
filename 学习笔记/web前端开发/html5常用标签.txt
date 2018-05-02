@@ -1,0 +1,50 @@
+             HTML5常用标签
+可以添加在头部区域<head></head>的元素标签为: <title>, <style>, <meta>, <link>, <script>, <noscript>,<base>,
+还可以插入脚本（scripts）, 样式文件（CSS），及各种meta信息。
+<link> 标签通常用于链接到样式表:
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+
+缩写
+<abbr></abbr>如：<abbr title="etcetera">etc.</abbr>
+<acronym></acronym>如：<acronym title="World Wide Web">WWW</acronym>
+注：把鼠标移至缩略词语上时，title 可用于展示表达的完整版本
+
+文字方向
+<p>该段落文字从左到右显示。</p>  
+<p><bdo dir="rtl">该段落文字从右到左显示。</bdo></p> 
+
+块引用<p><q></q></p>
+<p>WWF's goal is to: 
+	<q>Build a future where people live in harmony with nature.</q>
+We hope they succeed.</p>
+
+删除字效果<del></del>和插入字效果<ins></ins>
+<p>My favorite color is <del>blue</del> <ins>red</ins>!</p>
+
+文本格式化标签
+<b></b>定义粗体
+<em></em>定义着重文字
+<i></i>定义斜体
+<small></small>定义小号字
+<strong></strong>定义加重语气
+<sub></sub>定义下标
+<sup></sup>定义上标
+<pre> 标签可定义预格式化的文本。
+被包围在 <pre> 标签 元素中的文本通常会保留空格和换行符。
+<blockquote> 标签定义摘自另一个源的块引用。
+浏览器通常会对 <blockquote> 元素进行缩进。
+<cite> 标签定义作品（比如书籍、歌曲、电影、电视节目、绘画、雕塑等等）的标题。
+通常使用font-family（字体），color（颜色），和font-size（字体大小）属性来定义文本样式，而不是使用<font>标签。
+
+使用 target 属性，可以定义被链接的文档在何处显示；取"_top"时会跳出框架
+<a href="http://www.runoob.com/" target="_blank">访问菜鸟教程!</a>将会在新窗口打开文档
+
+<p>创建图片链接:
+<a href="http://www.runoob.com/html/html-tutorial.html">
+<img  border="10" src="smiley.gif" alt="HTML 教程" width="32" height="32"></a></p>
+
+创建邮件链接
+<a href="mailto:zhangrr601@163.com?subject=这是邮件的主题&body=这是邮件的内容" rel="nofollow">发送邮件</a>
+
