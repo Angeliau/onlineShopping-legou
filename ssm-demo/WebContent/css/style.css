@@ -1,0 +1,32 @@
+@CHARSET "UTF-8";
+/*统一页面字体和大小*/
+body{
+	font-family: "宋体";
+	font-size: 20px;
+}
+/*清除元素的边界、补白、边框默认样式*/
+*{
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+/*当前表单样式*/
+#div1,#div2{
+	border:solid 2px #b7ddf2;
+	margin: 0 auto;
+	background: #ebf4fb;
+	text-align: center;
+}
+/*统一输入框样式*/
+#div1 input{
+	float: left;
+	font-size: 15px;
+	border: solid 1px #aacfe4;
+	width: 200px;
+}
+/*提交按钮*/
+#submit{
+	margin-left: 150px;
+	background: #666666;
+	
+}

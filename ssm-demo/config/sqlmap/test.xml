@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bin.dao.StudentDao">
+    <select id="findAll" resultType="com.bin.po.Student">
+    	select * from test
+    </select>
+   <!--1.使用参数顺序接收 
+    <insert id="addStu" parameterType="String">
+        insert into test(name,hobby) values(#{0},#{1}) 
+    </insert> -->
+    <!-- 2.使用@Param注解
+    <insert id="addStu" parameterType="String">
+        insert into test(name,hobby) values(#{name},#{hobby}) 
+    </insert> -->
+    <!-- 3.使用map -->
+    <insert id="addStu" parameterType="String">
+        insert into test(name,hobby) values(#{0},#{1}) 
+    </insert>
+</mapper>
