@@ -3,6 +3,7 @@
 body{
 	font-family: "宋体";
 	font-size: 20px;
+	text-align: center;
 }
 /*清除元素的边界、补白、边框默认样式*/
 *{
@@ -13,9 +14,10 @@ body{
 /*当前表单样式*/
 #div1,#div2{
 	border:solid 2px #b7ddf2;
+	//居中显示
 	margin: 0 auto;
 	background: #ebf4fb;
-	text-align: center;
+	
 }
 /*统一输入框样式*/
 #div1 input{

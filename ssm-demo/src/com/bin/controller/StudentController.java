@@ -16,7 +16,7 @@ import com.bin.service.StudentService;
  * @Description:  Student's web view
  * @author: xb    
  * @date:   2018年11月19日 下午5:44:36   
- * @version V1.0
+ * @version v1.0
  */
 @Controller
 public class StudentController {
