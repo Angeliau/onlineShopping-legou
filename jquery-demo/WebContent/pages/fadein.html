@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery淡入淡出</title>
+<!-- jquery动画插件 -->
+<script src="http://code.jquery.com/jquery-1.12.4.js"
+	integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+	crossorigin="anonymous">
+</script>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("button").click(function(){
+		$('#div1').fadeIn();
+		$('#div2').fadeIn('slow');
+		$('#div3').fadeIn(3000);//3s内淡入
+	});
+});
+</script>
+</head>
+<body>
+<a href="index.html" style="text-decoration:none;border-bottom:dashed 1px red;color:#8A2BE2">返回jquery隐藏</a>
+<hr>
+<button>点我试试</button>
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery选择器</title>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('button').click(function(){
+		//$('p').hide();元素选择器
+		//$('#test').hide();//id选择器
+		$('.p1').hide();//类选择器
+	});
+});
+function Year_Month(){ 
+    var now = new Date(); 
+    var yy = now.getYear(); 
+    var mm = now.getMonth()+1; 
+    var cl = '<font color="#0000df">'; 
+    if (now.getDay() == 0) cl = '<font color="#c00000">'; 
+    if (now.getDay() == 6) cl = '<font color="#00c000">'; 
+    return(cl +  yy + '年' + mm + '月</font>'); 
+} 
+
+function Date_of_Today(){ 
+    var now = new Date(); 
+    var cl = '<font color="#0000df">'; 
+    if (now.getDay() == 0) cl = '<font color="#c00000">'; 
+    if (now.getDay() == 6) cl = '<font color="#00c000">'; 
+    return(cl +  now.getDate() + '</font>'); 
+} 
+
+function Day_of_Today(){ 
+    var day = new Array(); 
+    day[0] = "星期日"; 
+    day[1] = "星期一"; 
+    day[2] = "星期二"; 
+    day[3] = "星期三"; 
+    day[4] = "星期四"; 
+    day[5] = "星期五"; 
+    day[6] = "星期六"; 
+    var now = new Date(); 
+    var cl = '<font color="#0000df">'; 
+    if (now.getDay() == 0) cl = '<font color="#c00000">'; 
+    if (now.getDay() == 6) cl = '<font color="#00c000">'; 
+    return(cl +  day[now.getDay()] + '</font>'); 
+} 
+
+function CurentTime(){ 
+    var now = new Date(); 
+    var hh = now.getHours(); 
+    var mm = now.getMinutes(); 
+    var ss = now.getTime() % 60000; 
+    ss = (ss - (ss % 1000)) / 1000; 
+    var clock = hh+':'; 
+    if (mm < 10) clock += '0'; 
+    clock += mm+':'; 
+    if (ss < 10) clock += '0'; 
+    clock += ss; 
+    return(clock); 
+} 
+
+function refreshCalendarClock(){ 
+document.all.calendarClock1.innerHTML = Year_Month(); 
+document.all.calendarClock2.innerHTML = Date_of_Today(); 
+document.all.calendarClock3.innerHTML = Day_of_Today(); 
+document.all.calendarClock4.innerHTML = CurentTime(); 
+} 
+
+function getCalendarClockFreeCodeMsg(nn){ 
+    if (nn == 'off') CalendarClockFreeCode.style.visibility = 'hidden'; 
+    else { 
+       CalendarClockFreeCode.style.visibility = 'visible'; 
+       setTimeout("getCalendarClockFreeCodeMsg('off')",10000); 
+    } 
+} 
+
+document.write('<table border="0" align="center" cellpadding="0" cellspacing="0" width="60" bgcolor="#C0C0C0" height="70">');
+document.write('<tr><td valign="top" width="100%" height="100%">');
+document.write('<table border="1" cellpadding="0" cellspacing="0" width="57" bgcolor="#FEFEEF" height="67">');
+document.write('<font id="calendarClock1" style="font-family:宋体;font-size:7pt;line-height:120%"> </font><br>');
+document.write('<font id="calendarClock2" style="font-family:Arial;font-size:14pt;line-height:120%"> </font><br>');
+document.write('<font id="calendarClock3" style="font-family:宋体;font-size:9pt;line-height:120%"> </font><br>');
+document.write('<font id="calendarClock4" style="color:#100080;font-family:宋体;font-size:8pt;line-height:120%"><b> </b></font>');
+document.write('</td></tr></table>');
+document.write('</td></tr></table>'); 
+document.write('</td></tr></table>');
+setInterval('refreshCalendarClock()',1000);
+
+/*
+ * 最简单的时间显示
+ */
+setInterval("jnkc.innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",1000);
+</script>
+<style type="text/css">
+	#jnkc{
+		font-size: 30px;
+		font-family: '微软雅黑 consolas';
+		color:red;
+	}
+</style>
+</head>
+<body>
+<div id="jnkc" align="center">
+</div>
+<h3>这是一个标题，不会被隐藏</h3>
+<p class="p1">段落一</p>
+<p id="test">另一个段落</p>
+<button>点我试试</button>
+<hr>
+<a href="fadein.html" style="text-decoration:none;border-bottom:dashed 1px red;color:#666;zoom:1">点我去演示淡入淡出效果</a>
+</body>
+</html>

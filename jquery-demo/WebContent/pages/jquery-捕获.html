@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Jquery捕获</title>
+<!-- 相对路径 -->
+<script src="../js/jquery-1.9.1.min.js"></script>
+<!-- 绝对路径 -->
+<!-- <script src="F:\Eclipse\work\jquery-demo\WebContent\js\jquery-1.9.1.min.js"></script> -->
+<script>
+	$(document).ready(function(){
+		$("#btn1").click(function(){
+			alert("Text:"+$("#test").text());
+		});
+		$("#btn2").click(function(){
+			alert("Html:"+ $("#test").html());
+		});
+		/* 对于固有属性，建议使用prop方法获取值(使用attr也能取到值)，
+		 * 对于HTML元素自己自定义的 DOM 属性，在处理时，必须使用 attr 方法。否则，取到的值是undefined.
+		 *  prop()函数的结果:
+		 *     1.如果有相应的属性，返回指定属性值。
+		 *     2.如果没有相应的属性，返回值是空字符串。
+         *
+		 *	attr()函数的结果:
+		 *    1.如果有相应的属性，返回指定属性值。
+		 *    2.如果没有相应的属性，返回值是undefined。
+		 *	具有 true 和 false 两个属性的属性，如 checked, selected 或者 disabled 使用prop()
+		 */
+		$('#btn-href').click(function(){
+			alert($('#runoob').prop("href"));
+		});
+		$('#btn-action').click(function(){
+			//alert($('#baidu').prop("action"));
+			alert($('#baidu').attr("action"));
+		});
+	});
+</script>
+</head>
+<body>
+<p id="test">这是段落中的 <b>粗体</b> 文本。</p>
+<button id="btn1">显示文本</button>
+<button id="btn2">显示 HTML</button>
+<hr>
+<div>
+</div>
+	<p><a href="http://www.runoob.com" id="runoob">菜鸟教程</a></p>
+	<button id="btn-href">显示 href 属性的值</button>
+	<!-- 自定义DOM属性 -->
+	<p><a href="http://www.baidu.com" id="baidu" action="search">百度一下</a></p>
+	<button id="btn-action">显示action属性的值</button>
+</body>
+</html>
