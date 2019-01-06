@@ -1,0 +1,36 @@
+<!-- 
+ 	创建时间：2019-1-5
+ 	创建人：xb
+ 	说明：jquery操作html元素 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery操作html</title>
+<script src="../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//设置单一属性
+		$("#btn1").click(function(){
+			$(".p1").css("background-color","yellow")
+		});
+		//设置多个属性
+		$("#btn2").click(function(){
+			$(".p2").css({"background-color":"yellow","font-size":"200%"});
+		})
+	});
+</script>
+</head>
+<body>
+<!-- 由于id值唯一，因此不能通过使用相同的id改变同一个标签的样式 ，但可以使用class属性值，class属性值可以相同 -->
+<p class="p1" style="background-color:#ff0000">这是一个段落。</p>
+<p class="p1" style="background-color:#00ff00">这是一个段落。</p>
+<p class="p1" style="background-color:#0000ff">这是一个段落。</p>
+<button id="btn1">设置p元素的background-color</button>
+<hr>
+<p class="p2" style="background-color:#ff0000">这是一个段落。</p>
+<p class="p2" style="background-color:#00ff00">这是一个段落。</p>
+<p class="p2" style="background-color:#0000ff">这是一个段落。</p>
+<button id="btn2">设置多个css属性</button>
+</body>
+</html>
